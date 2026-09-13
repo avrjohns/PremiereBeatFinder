@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Beat Marker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Beat Marker</h1>
+
+    <section>
+        <button id="scanBtn">1. Scan Selected Clip</button>
+        <div id="clipInfo" class="info">No clip scanned yet.</div>
+    </section>
+
+    <section class="controls">
+        <label>
+            Sensitivity <span id="sensitivityVal">1.2</span>
+            <input type="range" id="sensitivity" min="0.8" max="2.0" step="0.05" value="1.2" />
+        </label>
+
+        <div class="row">
+            <label>Min BPM
+                <input type="number" id="minBpm" value="60" min="20" max="300" />
+            </label>
+            <label>Max BPM
+                <input type="number" id="maxBpm" value="200" min="20" max="300" />
+            </label>
+        </div>
+
+        <div class="row">
+            <label>Marker color
+                <select id="color">
+                    <option value="0">Green</option>
+                    <option value="1">Red</option>
+                    <option value="2">Purple</option>
+                    <option value="3" selected>Orange</option>
+                    <option value="4">Yellow</option>
+                    <option value="6">Blue</option>
+                    <option value="7">Cyan</option>
+                </select>
+            </label>
+            <label>Name prefix
+                <input type="text" id="prefix" value="Beat" />
+            </label>
+        </div>
+    </section>
+
+    <section>
+        <button id="detectBtn">2. Detect Beats &amp; Add Markers</button>
+        <button id="clearBtn" class="secondary">Clear Previous Beat Markers</button>
+        <div id="bpmResult" class="bpm"></div>
+    </section>
+
+    <section>
+        <button id="chooseImagesBtn">3. Select Images</button>
+        <input type="file" id="imageFiles" accept="image/*" multiple style="display:none" />
+        <div id="imageList" class="info">No images selected.</div>
+    </section>
+
+    <section>
+        <button id="placeBtn">4. Place Images at Beat Markers</button>
+    </section>
+
+    <section>
+        <h2>Log</h2>
+        <pre id="log"></pre>
+    </section>
+
+    <script src="lib/CSInterface.js"></script>
+    <script src="beatDetect.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    font-family: -apple-system, "Segoe UI", sans-serif;
+    background: #1e1e1e;
+    color: #ddd;
+    margin: 0;
+    padding: 12px;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 15px;
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+h2 {
+    font-size: 12px;
+    margin: 6px 0 4px 0;
+    color: #aaa;
+}
+
+section {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+button {
+    background: #3a3a3a;
+    color: #eee;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+
+button:hover {
+    background: #4a4a4a;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+button.secondary {
+    background: transparent;
+}
+
+.info {
+    margin-top: 6px;
+    color: #9cf;
+    word-break: break-word;
+}
+
+.controls label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.controls .row {
+    display: flex;
+    gap: 10px;
+}
+
+.controls .row label {
+    flex: 1;
+}
+
+input[type="number"], input[type="text"], select {
+    width: 100%;
+    box-sizing: border-box;
+    background: #2b2b2b;
+    color: #eee;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 2px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.bpm {
+    margin-top: 6px;
+    font-weight: bold;
+    color: #ffb86c;
+}
+
+#log {
+    background: #141414;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 6px;
+    height: 160px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-size: 11px;
+    color: #8f8;
+    margin: 0;
+}
